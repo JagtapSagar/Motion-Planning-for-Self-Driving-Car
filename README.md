@@ -11,6 +11,8 @@ In order to implement a fully functional motion planner for autonomous car in th
 * Static Obstacle avoidance
 * Velocity Profile generation
 
+The control module used in this simulation is similar to the one implemented in [vehicle control](https://github.com/JagtapSagar/Vehicle-Control/) project.
+
 ### Behavioural Planner
 Implemented a state machine that transitions between lane following, deceleration to the stop sign, staying stopped, and back to lane following, when it encounters a stop sign. All the code for the behavioural planner is contained in behavioural_planner.py. Before the state machine transitions are implemented it is important to define parts of a intersection.
 
@@ -54,8 +56,6 @@ To check whether a path is void of obstacles circle-based collision checking met
 Now that we have the path selected, a velocity profile must be generated for the controls to execute. In this project a Linear Ramp Velocity profile was used. This is computed using the vehicle’s current velocity, its desired final velocity (Eg, 0 mph for stop line, lead vehicle speed or the road speed limit for lane following), as well as the path length to next goal state. Alternative methods like Trapezoidal velocity profile also could have be used.
 This velocity planner does not handle all edge cases, but handles stop signs, lead dynamic obstacles, as well as nominal lane maintenance. The implementation of this can be found in velocity_planner.py.
 
-Latitude and Longitude controllers were also implemented in controller_2d.py using Stanley Controller and PID controller respectively to execute the motion plan. 
-
 The images below illustrate both the output velocity profile (in yellow) generated during this simulation and the controller outputs. These plots pertain to the simulation described in the Simulation section below.
 
  <p align="center"><img src='https://github.com/JagtapSagar/Motion-Planning-for-Self-Driving-Car/blob/main/Images/control_feedback.gif' width="300" height="600"></p>
@@ -64,7 +64,7 @@ Running Carla Simulator
 ---
 To run this project:
 1. Install Carla Simulator
-2. Download this Course4FinalProject directory with all its files into the PythonClient folder in the Carla simulator directory.
+2. Download this directory with all its files into a folder in the PythonClient directory within the Carla simulator directory.
 3. Execute following command in the simulator directory to open the simulator.
    * For Ubuntu: `./CarlaUE4.sh /Game/Maps/Course4 -windowed -carla-server -benchmark -fps=30`
    * For Windows: `CarlaUE4.exe /Game/Maps/Course4 -windowed -carla-server -benchmark -fps=30`
