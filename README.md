@@ -1,1 +1,1 @@
-# Motion-Planning-for-Self-Driving-Car
+# Motion Planning for Self-Driving Car
