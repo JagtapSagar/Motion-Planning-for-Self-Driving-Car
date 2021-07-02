@@ -81,10 +81,10 @@ NOTE:
 Simulation
 ---
 The simulation begins with the self-driving car following the lead car while avoiding obstacles like parked cars in its lane. The animation below illustrates this part of the simulation. The vehicle avoids the parked car but continues to follow its lane.
-<img src='https://github.com/JagtapSagar/Self-Driving-Cars-Specialization/blob/main/Motion%20Planning%20for%20Self-Driving%20Cars/Course4FinalProject/controller_output/Images/CARLA_obstacle-avoidance_and_follow_lane.gif'>
+<img src='https://github.com/JagtapSagar/Motion-Planning-for-Self-Driving-Car/blob/main/Images/CARLA_obstacle-avoidance_and_follow_lane.gif'>
 
 The car stays in the FOLLOW_LANE state keeping a safe distance from the lead vehicle if any until the stop line at the T-intersection approaches. The vehicle enters DECELERATE_TO_STOP state as it enters the *Approaching zone of intersection* and starts slowing down. When the vehicle enters the *At zone* of the intersection at the stop line it enters the STAY_STOPPED state and remains stopped for a few seconds. Once the stop time is up and the path is clear of obstacles the vehicle then enters the FOLLOW_LANE state and exits right at the intersection travelling along the desired trajectory. The simulation comes to an end when the self-driving car stops at the next stop line.
-<img src='https://github.com/JagtapSagar/Self-Driving-Cars-Specialization/blob/main/Motion%20Planning%20for%20Self-Driving%20Cars/Course4FinalProject/controller_output/Images/CARLA_intersection.gif'>
+<img src='https://github.com/JagtapSagar/Motion-Planning-for-Self-Driving-Car/blob/main/Images/CARLA_intersection.gif'>
 
 
 
