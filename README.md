@@ -1,4 +1,4 @@
-Motion Planning for Self-Driving Car in CARLA Simulator
+Motion Planning for Self-Driving Car
 ===
 [behavioural planner](#Behavioural-Planner)/[local planner](#local-planner)/[static obstacle avoidance](#Static-Obstacle-avoidance)/[velocity profile generation](#Velocity-Profile-generation)/[running carla simulator](#Running-Carla-Simulator)/[Simulation](#Simulation)
 
